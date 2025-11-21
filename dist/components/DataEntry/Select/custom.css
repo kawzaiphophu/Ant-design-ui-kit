@@ -14,12 +14,12 @@
 .ant-select-single.ant-select-disabled
   .ant-select-selector
   .ant-select-selection-item {
-  color: #9da6b5;
+  color: var(--color-text-placeholder);
 }
 
 /* Required Asterisk */
 .required-asterisk {
-  color: var(--primary-color, #1890ff);
+  color: var(--color-primary);
   margin-left: 4px;
   font-size: 12px;
 }

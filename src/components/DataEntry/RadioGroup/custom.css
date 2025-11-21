@@ -10,7 +10,7 @@
 
 /* Required Asterisk */
 .required-asterisk {
-  color: var(--primary-color, #1890ff);
+  color: var(--color-primary);
   margin-left: 4px;
   font-size: 12px;
 }

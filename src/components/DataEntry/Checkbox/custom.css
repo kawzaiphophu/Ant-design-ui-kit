@@ -48,7 +48,7 @@
 }
 
 .checkbox-label-container.disabled {
-  color: rgba(0, 0, 0, 0.25);
+  color: var(--color-text-disabled);
 }
 
 .checkbox-label-container.default-no-supporting {
@@ -56,11 +56,11 @@
 }
 
 .checkbox-supporting-text {
-  color: #8c8c8c;
+  color: var(--color-text-quinary);
 }
 
 .checkbox-supporting-text.disabled {
-  color: rgba(0, 0, 0, 0.25);
+  color: var(--color-text-disabled);
 }
 
 .checkbox-wrapper {

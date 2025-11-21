@@ -57,166 +57,166 @@
 /* Primary Color */
 .custom-button.color-primary.variant-solid {
   color: white;
-  background-color: var(--primary-color, #1890ff);
-  border: 1px solid var(--primary-color, #1890ff);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .custom-button.color-primary.variant-solid:hover:not(:disabled) {
-  background-color: var(--primary-color, #1890ff);
-  border-color: var(--primary-color, #1890ff);
+  background-color: var(--color-primary-background-hover);
+  border-color: var(--color-primary-background-hover);
 }
 
 .custom-button.color-primary.variant-outlined {
-  color: var(--primary-color, #1890ff);
+  color: var(--color-primary);
   background-color: transparent;
-  border: 1px solid var(--primary-color, #1890ff);
+  border: 1px solid var(--color-primary);
 }
 
 .custom-button.color-primary.variant-outlined:hover:not(:disabled) {
-  color: var(--primary-dark, #096dd9);
-  background-color: var(--primary-hover, #e6f7ff);
-  border-color: var(--primary-dark, #096dd9);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-dark);
 }
 
 .custom-button.color-primary.variant-ghost {
-  color: var(--primary-color, #1890ff);
+  color: var(--color-primary);
   background-color: transparent;
   border: none;
 }
 
 .custom-button.color-primary.variant-ghost:hover:not(:disabled) {
-  color: var(--primary-dark, #096dd9);
-  background-color: var(--primary-hover, #e6f7ff);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-hover);
 }
 
 .custom-button.color-primary.variant-dashed {
-  color: var(--primary-color, #1890ff);
-  border: 1px dashed var(--primary-color, #1890ff);
+  color: var(--color-primary);
+  border: 1px dashed var(--color-primary);
 }
 
 .custom-button.color-primary.variant-dashed:hover:not(:disabled) {
-  background-color: var(--primary-hover, #e6f7ff);
+  background-color: var(--color-primary-hover);
 }
 
 .custom-button.color-primary.variant-link {
-  color: var(--primary-color, #1890ff);
+  color: var(--color-primary);
   background-color: transparent;
   border: none;
 }
 
 .custom-button.color-primary.variant-link:hover:not(:disabled) {
-  color: var(--primary-dark, #096dd9);
+  color: var(--color-primary-dark);
 }
 
 /* Error Color */
 .custom-button.color-error.variant-solid {
   color: white;
-  background-color: var(--error-color, #ff4d4f);
-  border: 1px solid var(--error-color, #ff4d4f);
+  background-color: var(--color-error);
+  border: 1px solid var(--color-error);
 }
 
 .custom-button.color-error.variant-solid:hover:not(:disabled) {
-  background-color: var(--error-dark, #cf1322);
-  border-color: var(--error-dark, #cf1322);
+  background-color: var(--color-error-dark);
+  border-color: var(--color-error-dark);
 }
 
 .custom-button.color-error.variant-outlined {
-  color: var(--error-color, #ff4d4f);
+  color: var(--color-error);
   background-color: transparent;
-  border: 1px solid var(--error-color, #ff4d4f);
+  border: 1px solid var(--color-error);
 }
 
 .custom-button.color-error.variant-outlined:hover:not(:disabled) {
-  color: var(--error-dark, #cf1322);
-  background-color: var(--error-hover, #fff1f0);
-  border-color: var(--error-dark, #cf1322);
+  color: var(--color-error-dark);
+  background-color: var(--color-error-hover);
+  border-color: var(--color-error-dark);
 }
 
 .custom-button.color-error.variant-ghost {
-  color: var(--error-color, #ff4d4f);
+  color: var(--color-error);
   background-color: transparent;
   border: none;
 }
 
 .custom-button.color-error.variant-ghost:hover:not(:disabled) {
-  color: var(--error-dark, #cf1322);
-  background-color: var(--error-hover, #fff1f0);
+  color: var(--color-error-dark);
+  background-color: var(--color-error-hover);
 }
 
 .custom-button.color-error.variant-dashed {
-  color: var(--error-color, #ff4d4f);
-  border: 1px dashed var(--error-color, #ff4d4f);
+  color: var(--color-error);
+  border: 1px dashed var(--color-error);
 }
 
 .custom-button.color-error.variant-dashed:hover:not(:disabled) {
-  background-color: var(--error-hover, #fff1f0);
+  background-color: var(--color-error-hover);
 }
 
 .custom-button.color-error.variant-link {
-  color: var(--error-color, #ff4d4f);
+  color: var(--color-error);
   background-color: transparent;
   border: none;
 }
 
 .custom-button.color-error.variant-link:hover:not(:disabled) {
-  background-color: var(--error-hover, #fff1f0);
+  background-color: var(--color-error-hover);
 }
 
 /* Neutral Color */
 .custom-button.color-neutral.variant-solid {
   color: white;
-  background-color: var(--neutral-text, #262626);
-  border: 1px solid var(--neutral-bg, #f5f5f5);
+  background-color: var(--color-neutral-text);
+  border: 1px solid var(--color-neutral-bg);
 }
 
 .custom-button.color-neutral.variant-outlined {
-  color: var(--neutral-text, #262626);
+  color: var(--color-neutral-text);
   background-color: transparent;
-  border: 1px solid var(--neutral-border, #d9d9d9);
+  border: 1px solid var(--color-neutral-border);
 }
 
 .custom-button.color-neutral.variant-outlined:hover:not(:disabled) {
-  color: var(--hover-text, #000000);
-  background-color: var(--neutral-bg, #f5f5f5);
-  border-color: #BDC3CD;
+  color: var(--color-neutral-hover-text);
+  background-color: var(--color-neutral-bg);
+  border-color: var(--color-neutral-hover-border);
 }
 
 .custom-button.color-neutral.variant-ghost {
-  color: var(--neutral-text, #262626);
+  color: var(--color-neutral-text);
   background-color: transparent;
   border: none;
 }
 
 .custom-button.color-neutral.variant-ghost:hover:not(:disabled) {
-  color: var(--hover-text, #000000);
-  background-color: var(--neutral-bg, #f5f5f5);
+  color: var(--color-neutral-hover-text);
+  background-color: var(--color-neutral-bg);
 }
 
 .custom-button.color-neutral.variant-dashed {
-  color: var(--neutral-text, #262626);
-  border: 1px dashed var(--neutral-border, #d9d9d9);
+  color: var(--color-neutral-text);
+  border: 1px dashed var(--color-neutral-border);
 }
 
 .custom-button.color-neutral.variant-dashed:hover:not(:disabled) {
-  color: var(--hover-text, #000000);
-  background-color: var(--neutral-bg, #f5f5f5);
-  border-color: #BDC3CD;
+  color: var(--color-neutral-hover-text);
+  background-color: var(--color-neutral-bg);
+  border-color: var(--color-neutral-hover-border);
 }
 
 .custom-button.color-neutral.variant-link {
-  color: var(--neutral-text, #262626);
+  color: var(--color-neutral-text);
   background-color: transparent;
   border: none;
 }
 
 .custom-button.color-neutral.variant-link:hover:not(:disabled) {
-  color: var(--hover-text, #000000);
+  color: var(--color-neutral-hover-text);
 }
 
 /* Disabled State */
 .custom-button:disabled:not(.variant-ghost) {
-  background-color: var(--disabled-background, #f5f5f5);
-  color: var(--disabled-text, #00000040);
+  background-color: var(--color-disabled);
+  color: var(--color-text-disabled);
   border: none;
   cursor: not-allowed;
 }

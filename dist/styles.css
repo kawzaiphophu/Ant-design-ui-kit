@@ -1,7 +1,138 @@
 /* Import all component styles */
-@import './components/Typography/typography.css';
-@import './components/DataEntry/Checkbox/custom.css';
-@import './components/DataEntry/RadioGroup/custom.css';
-@import './components/DataEntry/Select/custom.css';
-@import './components/DataEntry/TextField/custom.css';
-@import './components/DataEntry/ToggleSwitch/custom.css';
+@import "./components/Button/button.css";
+@import "./components/Typography/typography.css";
+@import "./components/DataEntry/Checkbox/custom.css";
+@import "./components/DataEntry/RadioGroup/custom.css";
+@import "./components/DataEntry/Select/custom.css";
+@import "./components/DataEntry/TextField/custom.css";
+@import "./components/DataEntry/ToggleSwitch/custom.css";
+
+/* Global CSS Variables */
+:root {
+  /* Primary Colors */
+  --color-primary: #00af43;
+  --color-primary-hover: #e5f7ec;
+  --color-primary-dark: #006928;
+  --color-primary-background: #00af43;
+  --color-primary-background-dark: #008c36;
+  --color-primary-background-hover: #008c36;
+  --color-primary-p20: #33bf69;
+  --color-primary-subtle: #e5f7ec;
+
+  /* Success Colors */
+  --color-success: #1eb950;
+  --color-success-lighter: #ace5be;
+  --color-success-subtle: #e8f8ed;
+  --color-success-darker: #11662c;
+  --color-success-p20: #16873a;
+  --color-success-p60: #97dfae;
+  --color-success-p90: #e8f8ed;
+
+  /* Warning Colors */
+  --color-warning: #ffab08;
+  --color-warning-darker: #996705;
+  --color-warning-subtle: #fff3e6;
+  --color-warning-p20: #cc8906;
+  --color-warning-p60: #ffdd9c;
+  --color-warning-p90: #fff7e6;
+
+  /* Error Colors */
+  --color-error: #da2110;
+  --color-error-subtle: #fbe8e7;
+  --color-error-p60: #f0a69f;
+  --color-error-p90: #fbe8e7;
+  --color-error-dark: #ae1a0c;
+  --color-error-hover: #fbe8e7;
+  --color-error-lighter: #f0a69f;
+
+  /* Info Colors */
+  --color-info: #65b2e8;
+  --color-info-subtle: #eff7fc;
+  --color-info-darker: #3c6a8b;
+  --color-info-p60: #c1e0f5;
+  --color-info-p90: #eff7fc;
+
+  /* Gray Colors */
+  --color-gray-light: #5b6a83;
+  --color-gray-dark: #050507;
+
+  /* Disabled */
+  --color-disabled: #dee1e6;
+
+  /* Brand Colors */
+  --color-brand-lighter: #f3f8fd;
+  --color-brand-darker: #183e60;
+  --color-brand-00: #477ab3;
+  --color-brand-20: #477ab3;
+  --color-brand-p60: #b5cae1;
+  --color-brand-p20: #b5cae1;
+  --color-brand-icon: #ffffff;
+
+  /* Lavender Colors */
+  --color-lavender-purple00: #a3a2dd;
+  --color-lavender-purple20: #8282b1;
+  --color-lavender-purplep60: #dadaf1;
+  --color-lavender-purplep90: #f6f6fc;
+
+  /* Neutral Colors */
+  --color-neutral-utils-00: #5b6a83;
+  --color-neutral-40: #37404f;
+  --color-neutral-60: #242a34;
+  --color-neutral-90: #090b0d;
+  --color-neutral-p80: #dee1e6;
+  --color-neutral-p90: #eff0f3;
+  --color-neutral-p95: #f7f8f9;
+  --color-neutral-text: #37404f;
+  --color-neutral-bg: #f7f8f9;
+  --color-neutral-border: #dee1e6;
+  --color-neutral-hover-text: #242a34;
+  --color-neutral-hover-border: #bdc3cd;
+
+  /* Text Colors */
+  --color-text-primary: #12151a;
+  --color-text-secondary: #37404f;
+  --color-text-quinary: #7c889c;
+  --color-text-placeholder: #9da6b5;
+  --color-text-tertiary: #495569;
+  --color-text-quarternary: #5b6a83;
+  --color-text-disabled: #bdc3cd;
+  --color-text-breadcrumb: #495569;
+  --color-text-breadcrumb-active: #008c36;
+  --color-text-brand-dark: #008c36;
+
+  /* Background Colors */
+  --color-background-primary: #ffffff;
+  --color-background-primary-hover: #f7f8f9;
+  --color-background-secondary: #f7f8f9;
+  --color-background-warning-subtle: #fff7e6;
+
+  /* Icon Colors */
+  --color-icon-secondary: #37404f;
+  --color-icon-quinary: #495569;
+  --color-icon-brand-dark: #008c36;
+  --color-icon-tertiary: #495569;
+
+  /* Dark Orange Colors */
+  --color-dark-orange-00: #e44218;
+  --color-dark-orange-p90: #fcece8;
+  --color-dark-orange-p20: #e96846;
+
+  /* Border Colors */
+  --color-border-primary: #dee1e6;
+  --color-border-brand-lighter: #99dfb4;
+  --color-border-primary-light: #33bf69;
+  --color-border-tertiary: #9da6b5;
+  --color-border-warning-lighter: #ffdd9c;
+
+  /* Button Colors */
+  --color-button-tertiary: #008c36;
+  --color-button-tertiary-neutral-icon: #242a34;
+
+  /* Utils Colors */
+  --color-utils-primary-p60: #99dfb4;
+  --color-utils-primary-p90: #e5f7ec;
+  --color-utils-primary-p20: #008c36;
+  --color-utils-warning-00: #ffab08;
+  --color-utils-error-00: #da2110;
+  --color-utils-success-00: #1eb950;
+}
