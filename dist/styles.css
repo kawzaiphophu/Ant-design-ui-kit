@@ -1,0 +1,7 @@
+/* Import all component styles */
+@import './components/Typography/typography.css';
+@import './components/DataEntry/Checkbox/custom.css';
+@import './components/DataEntry/RadioGroup/custom.css';
+@import './components/DataEntry/Select/custom.css';
+@import './components/DataEntry/TextField/custom.css';
+@import './components/DataEntry/ToggleSwitch/custom.css';

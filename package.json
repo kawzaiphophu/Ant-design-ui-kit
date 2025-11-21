@@ -1,12 +1,16 @@
 {
   "name": "@allkons/ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "type": "commonjs",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc --build && npm run copy-css",
-    "copy-css": "find src -name '*.css' -exec sh -c 'mkdir -p dist/$(dirname ${1#src/}) && cp $1 dist/${1#src/}' _ {} \\;"
+    "build": "tsc --build && npm run copy-css && npm run copy-styles",
+    "copy-css": "find src -name '*.css' -exec sh -c 'mkdir -p dist/$(dirname ${1#src/}) && cp $1 dist/${1#src/}' _ {} \\;",
+    "copy-styles": "cp src/styles.css dist/styles.css"
   },
   "peerDependencies": {
     "antd": ">=5.25.1",
