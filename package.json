@@ -5,7 +5,8 @@
   "module": "dist/index.js",
   "type": "commonjs",
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build && npm run copy-css",
+    "copy-css": "find src -name '*.css' -exec sh -c 'mkdir -p dist/$(dirname ${1#src/}) && cp $1 dist/${1#src/}' _ {} \\;"
   },
   "peerDependencies": {
     "antd": ">=5.25.1",
