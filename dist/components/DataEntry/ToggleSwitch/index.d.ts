@@ -1,5 +1,5 @@
 import './custom.css';
-interface CustomToggleSwitchProps {
+export interface CustomToggleSwitchProps {
     size?: 'small' | 'large';
     showLabel?: boolean;
     color?: 'success' | 'brand';

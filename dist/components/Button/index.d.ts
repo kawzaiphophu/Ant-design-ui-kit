@@ -44,7 +44,7 @@ type Variant = 'outlined' | 'dashed' | 'solid' | 'ghost' | 'link';
 type Size = 'small' | 'middle' | 'large';
 type Color = 'primary' | 'error' | 'neutral';
 type Bold = '400' | '500' | '600' | '700';
-interface CustomButtonProps {
+export interface CustomButtonProps {
     fullWidth?: boolean;
     variant?: Variant;
     size?: Size;

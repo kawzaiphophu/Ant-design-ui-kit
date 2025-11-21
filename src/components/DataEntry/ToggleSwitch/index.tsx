@@ -46,7 +46,7 @@ import { useEffect, useState } from 'react';
 import CustomTypography from '../../Typography';
 import './custom.css';
 
-interface CustomToggleSwitchProps {
+export interface CustomToggleSwitchProps {
   size?: 'small' | 'large';
   showLabel?: boolean;
   color?: 'success' | 'brand';

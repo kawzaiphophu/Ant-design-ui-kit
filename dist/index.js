@@ -35,18 +35,29 @@ var __importStar = (this && this.__importStar) || (function () {
 var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Antd = void 0;
+exports.CustomToggleSwitch = exports.CustomTextField = exports.CustomSelectField = exports.CustomRadioGroup = exports.CustomDatePicker = exports.CustomCheckbox = exports.CustomTypography = exports.CustomButton = exports.Antd = void 0;
 // Export AntD default under a namespace
 exports.Antd = __importStar(require("./antd"));
-// Export custom UI
-__exportStar(require("./components/Button"), exports);
-__exportStar(require("./components/Typography"), exports);
-__exportStar(require("./components/DataEntry/Checkbox"), exports);
-__exportStar(require("./components/DataEntry/DatePicker"), exports);
-__exportStar(require("./components/DataEntry/RadioGroup"), exports);
-__exportStar(require("./components/DataEntry/Select"), exports);
-__exportStar(require("./components/DataEntry/TextField"), exports);
-__exportStar(require("./components/DataEntry/ToggleSwitch"), exports);
+// Export custom UI components with named exports
+var Button_1 = require("./components/Button");
+Object.defineProperty(exports, "CustomButton", { enumerable: true, get: function () { return __importDefault(Button_1).default; } });
+var Typography_1 = require("./components/Typography");
+Object.defineProperty(exports, "CustomTypography", { enumerable: true, get: function () { return __importDefault(Typography_1).default; } });
+var Checkbox_1 = require("./components/DataEntry/Checkbox");
+Object.defineProperty(exports, "CustomCheckbox", { enumerable: true, get: function () { return __importDefault(Checkbox_1).default; } });
+var DatePicker_1 = require("./components/DataEntry/DatePicker");
+Object.defineProperty(exports, "CustomDatePicker", { enumerable: true, get: function () { return __importDefault(DatePicker_1).default; } });
+var RadioGroup_1 = require("./components/DataEntry/RadioGroup");
+Object.defineProperty(exports, "CustomRadioGroup", { enumerable: true, get: function () { return __importDefault(RadioGroup_1).default; } });
+var Select_1 = require("./components/DataEntry/Select");
+Object.defineProperty(exports, "CustomSelectField", { enumerable: true, get: function () { return __importDefault(Select_1).default; } });
+var TextField_1 = require("./components/DataEntry/TextField");
+Object.defineProperty(exports, "CustomTextField", { enumerable: true, get: function () { return __importDefault(TextField_1).default; } });
+var ToggleSwitch_1 = require("./components/DataEntry/ToggleSwitch");
+Object.defineProperty(exports, "CustomToggleSwitch", { enumerable: true, get: function () { return __importDefault(ToggleSwitch_1).default; } });
 // Optional theme
 __exportStar(require("./theme"), exports);

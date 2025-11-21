@@ -58,7 +58,7 @@ interface RadioOption {
     value: string | number;
     disabled?: boolean;
 }
-interface CustomRadioGroupProps extends Omit<RadioGroupProps, 'options'> {
+export interface CustomRadioGroupProps extends Omit<RadioGroupProps, 'options'> {
     name?: any;
     label?: React.ReactNode;
     rules?: any[];
