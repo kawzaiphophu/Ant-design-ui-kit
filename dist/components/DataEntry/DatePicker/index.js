@@ -71,10 +71,10 @@ const CustomDatePicker = (props) => {
     // Detect if any rule is required
     const isRequired = (Array.isArray(rules) && rules.some((rule) => rule.required === true)) ||
         required;
-    // Prepare label with asterisk after, using same logic as TextField
+    // Prepare label with asterisk after
     const renderLabel = () => {
         if (label) {
-            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "text-primary ml-1 text-xs", children: "*" })] }));
+            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "required-asterisk", children: "*" })] }));
         }
         return undefined;
     };
@@ -83,7 +83,7 @@ const CustomDatePicker = (props) => {
     if (name || label || rules) {
         const labelCol = vertical ? { span: 24 } : undefined;
         const wrapperCol = vertical ? { span: 24 } : undefined;
-        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: defaultRules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, tooltip: tooltip, extra: extra, help: help, validateStatus: validateStatus, hasFeedback: hasFeedback, getValueFromEvent: getValueFormEvent, className: "!mb-0", ...formItemProps, children: datePickerNode }));
+        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: defaultRules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, tooltip: tooltip, extra: extra, help: help, validateStatus: validateStatus, hasFeedback: hasFeedback, getValueFromEvent: getValueFormEvent, className: "form-item-no-margin", ...formItemProps, children: datePickerNode }));
     }
     return datePickerNode;
 };

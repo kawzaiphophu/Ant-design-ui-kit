@@ -1,6 +1,6 @@
 .custom-allkons.custom-checkbox .ant-checkbox {
-  align-self: start !important;
-  margin-top: 4px !important;
+  align-self: start;
+  margin-top: 4px;
 }
 
 .custom-allkons.custom-checkbox.ant-checkbox-wrapper.size-small
@@ -27,3 +27,48 @@
 .custom-allkons.custom-checkbox.ant-checkbox-wrapper .ant-checkbox-label {
   margin-top: 2px;
 }
+
+/* Checkbox Label Container */
+.checkbox-label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkbox-label-container.size-large {
+  font-size: 18px;
+}
+
+.checkbox-label-container.size-default {
+  font-size: 16px;
+}
+
+.checkbox-label-container.size-small {
+  font-size: 14px;
+}
+
+.checkbox-label-container.disabled {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-label-container.default-no-supporting {
+  margin-top: 2px;
+}
+
+.checkbox-supporting-text {
+  color: #8c8c8c;
+}
+
+.checkbox-supporting-text.disabled {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item-no-margin {
+  margin-bottom: 0;
+}
+

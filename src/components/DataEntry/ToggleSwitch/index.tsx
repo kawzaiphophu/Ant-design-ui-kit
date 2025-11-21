@@ -96,8 +96,10 @@ const CustomToggleSwitch = ({
     setIsCheckedState(isChecked);
   }, [isChecked]);
 
+  const switchClass = `${color === 'success' ? 'default' : 'brand'} ${size === 'small' ? 'switch-small' : 'switch-default'}`;
+
   return (
-    <div className="flex gap-3 items-center">
+    <div className="toggle-switch-container">
       <Switch
         defaultChecked={isChecked}
         checked={isCheckedState}
@@ -106,16 +108,14 @@ const CustomToggleSwitch = ({
         unCheckedChildren={showText ? 'OFF' : ''}
         disabled={isDisabled}
         size={size === 'small' ? 'small' : 'default'}
-        className={`${color === 'success' ? 'default' : 'brand'} ${
-          size === 'small' ? '!h-[20px]' : '!h-[24px]'
-        }`}
+        className={switchClass}
       />
       {type === 'text' && (
-        <div className="flex flex-col gap-1 -mt-0.5">
+        <div className="toggle-text-container">
           {title && (
             <CustomTypography
               variant="paragraph-small"
-              className="!font-normal !text-text-secondary"
+              className="toggle-title"
             >
               {title}
             </CustomTypography>
@@ -123,7 +123,7 @@ const CustomToggleSwitch = ({
           {supportingText && (
             <CustomTypography
               variant="paragraph-medium"
-              className="!font-normal !text-text-quinary"
+              className="toggle-supporting-text"
             >
               {supportingText}
             </CustomTypography>

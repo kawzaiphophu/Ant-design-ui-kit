@@ -86,17 +86,11 @@ const CustomCheckbox: FC<CustomCheckboxProps> = ({
     >
       {vertical ? null : (
         <div
-          className={`flex flex-col gap-1 ${
-            size === 'large'
-              ? 'text-lg'
-              : size === 'small'
-                ? 'text-sm'
-                : 'text-base'
-          } ${disabled ? 'text-disabled' : ''} ${size === 'default' && !supportingText && 'mt-[2px]'}`}
+          className={`checkbox-label-container size-${size} ${disabled ? 'disabled' : ''} ${size === 'default' && !supportingText ? 'default-no-supporting' : ''}`}
         >
           {label}
           {supportingText && (
-            <div className={disabled ? 'text-disabled' : 'text-gray'}>
+            <div className={`checkbox-supporting-text ${disabled ? 'disabled' : ''}`}>
               {supportingText}
             </div>
           )}
@@ -117,7 +111,7 @@ const CustomCheckbox: FC<CustomCheckboxProps> = ({
         rules={rules}
         labelCol={labelCol}
         wrapperCol={wrapperCol}
-        className="!mb-0"
+        className="form-item-no-margin"
         {...formItemProps}
       >
         {checkboxNode}
@@ -125,7 +119,7 @@ const CustomCheckbox: FC<CustomCheckboxProps> = ({
     );
   }
 
-  return <div className="flex flex-col">{checkboxNode}</div>;
+  return <div className="checkbox-wrapper">{checkboxNode}</div>;
 };
 
 export default CustomCheckbox;

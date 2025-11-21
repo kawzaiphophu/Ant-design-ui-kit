@@ -14,5 +14,18 @@
 .ant-select-single.ant-select-disabled
   .ant-select-selector
   .ant-select-selection-item {
-  color: #9da6b5 !important;
+  color: #9da6b5;
 }
+
+/* Required Asterisk */
+.required-asterisk {
+  color: var(--primary-color, #1890ff);
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* Form Item */
+.form-item-no-margin {
+  margin-bottom: 0;
+}
+

@@ -164,13 +164,13 @@ const CustomDatePicker: React.FC<DatePickerComponentProps> = (props) => {
     (Array.isArray(rules) && rules.some((rule) => rule.required === true)) ||
     required;
 
-  // Prepare label with asterisk after, using same logic as TextField
+  // Prepare label with asterisk after
   const renderLabel = () => {
     if (label) {
       return (
         <span>
           {label}
-          {isRequired && <span className="text-primary ml-1 text-xs">*</span>}
+          {isRequired && <span className="required-asterisk">*</span>}
         </span>
       );
     }
@@ -211,7 +211,7 @@ const CustomDatePicker: React.FC<DatePickerComponentProps> = (props) => {
         validateStatus={validateStatus}
         hasFeedback={hasFeedback}
         getValueFromEvent={getValueFormEvent}
-        className="!mb-0"
+        className="form-item-no-margin"
         {...formItemProps}
       >
         {datePickerNode}

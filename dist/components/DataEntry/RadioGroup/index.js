@@ -12,14 +12,14 @@ const CustomRadioGroup = ({ name, label, rules, options = [], onChange, value, b
     const isRequired = Array.isArray(rules) && rules.some((rule) => rule.required === true);
     const renderLabel = () => {
         if (label) {
-            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "text-primary ml-1 text-xs", children: "*" })] }));
+            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "required-asterisk", children: "*" })] }));
         }
         return null;
     };
     if (name || label || rules || Object.keys(formItemProps).length > 0) {
         const labelCol = vertical ? { span: 24 } : undefined;
         const wrapperCol = vertical ? { span: 24 } : undefined;
-        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: rules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, layout: "vertical", validateStatus: validateStatus, help: help, className: "!mb-0", ...formItemProps, children: radioGroup }));
+        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: rules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, layout: "vertical", validateStatus: validateStatus, help: help, className: "form-item-no-margin", ...formItemProps, children: radioGroup }));
     }
     return radioGroup;
 };

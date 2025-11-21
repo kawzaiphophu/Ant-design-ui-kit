@@ -149,7 +149,7 @@ const CustomRadioGroup: React.FC<CustomRadioGroupProps> = ({
       return (
         <span>
           {label}
-          {isRequired && <span className="text-primary ml-1 text-xs">*</span>}
+          {isRequired && <span className="required-asterisk">*</span>}
         </span>
       );
     }
@@ -171,7 +171,7 @@ const CustomRadioGroup: React.FC<CustomRadioGroupProps> = ({
         layout="vertical"
         validateStatus={validateStatus}
         help={help}
-        className="!mb-0"
+        className="form-item-no-margin"
         {...formItemProps}
       >
         {radioGroup}

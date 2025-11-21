@@ -76,10 +76,10 @@ const CustomSelectField = ({ size = 'middle', placeholder = '', disabled = false
     // Detect if any rule is required
     const isRequired = (Array.isArray(rules) && rules.some((rule) => rule.required === true)) ||
         required;
-    // Prepare label with asterisk after, using Tailwind for error color and margin
+    // Prepare label with asterisk after
     const renderLabel = () => {
         if (label) {
-            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "text-primary ml-1 text-xs", children: "*" })] }));
+            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "required-asterisk", children: "*" })] }));
         }
         return undefined;
     };
@@ -87,7 +87,7 @@ const CustomSelectField = ({ size = 'middle', placeholder = '', disabled = false
     if (name || label || rules) {
         const labelCol = vertical ? { span: 24 } : undefined;
         const wrapperCol = vertical ? { span: 24 } : undefined;
-        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: rules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, validateStatus: validateStatus, help: help, className: "!mb-0", ...formItemProps, children: selectNode }));
+        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: rules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, validateStatus: validateStatus, help: help, className: "form-item-no-margin", ...formItemProps, children: selectNode }));
     }
     return selectNode;
 };

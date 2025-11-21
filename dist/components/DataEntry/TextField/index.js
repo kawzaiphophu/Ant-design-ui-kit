@@ -62,18 +62,18 @@ require("./custom.css");
 const CustomTextField = ({ size = 'middle', placeholder = '', prefix, suffix, disabled = false, allowClear = false, className = '', name, label, rules, vertical = false, formItemProps, validateStatus, help, variant, required, type, focusRing = false, addonBefore, addonAfter, getValueProps, ...rest }) => {
     const [showPassword, setShowPassword] = (0, react_1.useState)(false);
     // Determine input size classes
-    let sizeClass = '';
+    let sizeClass = 'custom-allkons-input';
     if (size === 'large') {
-        sizeClass = `h-[48px] ${addonBefore || addonAfter ? '' : '!py-3 !px-4'}  !text-base`;
+        sizeClass += addonBefore || addonAfter ? ' size-large' : ' size-large with-padding';
     }
     else if (size === 'middle') {
-        sizeClass = `h-[40px] ${addonBefore || addonAfter ? '' : '!py-2 !px-4'} !text-base`;
+        sizeClass += addonBefore || addonAfter ? ' size-middle' : ' size-middle with-padding';
     }
     else if (size === 'small') {
-        sizeClass = `h-[32px] ${addonBefore || addonAfter ? '' : '!py-1 !px-3'}  !text-sm`;
+        sizeClass += addonBefore || addonAfter ? ' size-small' : ' size-small with-padding';
     }
-    // Prepare prefix wrapper with Tailwind margin
-    const defaultPrefix = prefix ? ((0, jsx_runtime_1.jsx)("span", { className: "mr-1", children: prefix })) : undefined;
+    // Prepare prefix wrapper
+    const defaultPrefix = prefix ? ((0, jsx_runtime_1.jsx)("span", { className: "prefix-wrapper", children: prefix })) : undefined;
     // Handle password visibility toggle
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -151,7 +151,7 @@ const CustomTextField = ({ size = 'middle', placeholder = '', prefix, suffix, di
     // Prepare suffix for password type
     const getSuffix = () => {
         if (type === 'password') {
-            return ((0, jsx_runtime_1.jsx)("span", { className: "cursor-pointer select-none hover:opacity-70 transition-opacity", onClick: togglePasswordVisibility, children: showPassword ? ((0, jsx_runtime_1.jsx)("i", { className: "ri-eye-line text-gray-500" })) : ((0, jsx_runtime_1.jsx)("i", { className: "ri-eye-off-line text-gray-500" })) }));
+            return ((0, jsx_runtime_1.jsx)("span", { className: "password-toggle", onClick: togglePasswordVisibility, children: showPassword ? ((0, jsx_runtime_1.jsx)("i", { className: "ri-eye-line eye-icon" })) : ((0, jsx_runtime_1.jsx)("i", { className: "ri-eye-off-line eye-icon" })) }));
         }
         return suffix;
     };
@@ -168,16 +168,14 @@ const CustomTextField = ({ size = 'middle', placeholder = '', prefix, suffix, di
         }
         return type;
     };
-    const inputNode = ((0, jsx_runtime_1.jsx)(antd_1.Input, { className: `custom-allkons-input ${sizeClass} ${className} [&.ant-input]:!rounded-lg ${focusRing
-            ? '[&.ant-input-outlined:focus-within]:!border [&.ant-input-outlined:focus-within]:!border-primary [&.ant-input-outlined:focus-within]:!ring-2 [&.ant-input-outlined:focus-within]:!ring-primary-hover'
-            : ''}`, placeholder: placeholder, prefix: defaultPrefix, suffix: getSuffix(), disabled: disabled, allowClear: allowClear, variant: variant, type: getInputType(), addonBefore: addonBefore, addonAfter: addonAfter, onKeyPress: handleKeyPress, onPaste: handlePaste, ...rest }));
+    const inputNode = ((0, jsx_runtime_1.jsx)(antd_1.Input, { className: `${sizeClass} ${className} input-rounded ${focusRing ? 'with-focus-ring' : ''}`, placeholder: placeholder, prefix: defaultPrefix, suffix: getSuffix(), disabled: disabled, allowClear: allowClear, variant: variant, type: getInputType(), addonBefore: addonBefore, addonAfter: addonAfter, onKeyPress: handleKeyPress, onPaste: handlePaste, ...rest }));
     // Detect if any rule is required
     const isRequired = (Array.isArray(rules) && rules.some((rule) => rule.required === true)) ||
         required;
-    // Prepare label with asterisk after, using Tailwind for error color and margin
+    // Prepare label with asterisk after
     const renderLabel = () => {
         if (label) {
-            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "text-primary ml-1 text-xs", children: "*" })] }));
+            return ((0, jsx_runtime_1.jsxs)("span", { children: [label, isRequired && (0, jsx_runtime_1.jsx)("span", { className: "required-asterisk", children: "*" })] }));
         }
         return undefined;
     };
@@ -185,7 +183,7 @@ const CustomTextField = ({ size = 'middle', placeholder = '', prefix, suffix, di
     if (name || label || rules) {
         const labelCol = vertical ? { span: 24 } : undefined;
         const wrapperCol = vertical ? { span: 24 } : undefined;
-        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: rules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, validateStatus: validateStatus, help: help, className: "!mb-0", getValueProps: getValueProps, ...formItemProps, children: inputNode }));
+        return ((0, jsx_runtime_1.jsx)(antd_1.Form.Item, { name: name, label: renderLabel(), rules: rules, required: false, colon: false, labelCol: labelCol, wrapperCol: wrapperCol, validateStatus: validateStatus, help: help, className: "form-item-no-margin", getValueProps: getValueProps, ...formItemProps, children: inputNode }));
     }
     return inputNode;
 };

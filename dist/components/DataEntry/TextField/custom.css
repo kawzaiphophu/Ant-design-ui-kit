@@ -1,11 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Custom TextField Styles */
+.custom-allkons-input {
+  /* Base styles */
+}
+
+.custom-allkons-input.input-rounded.ant-input {
+  border-radius: 8px;
+}
 
 .custom-allkons-input .ant-input-group-addon {
-  @apply !text-base;
+  font-size: 16px;
 }
 
 .custom-allkons-input .ant-input-wrapper.ant-input-group input {
-  @apply !text-base;
+  font-size: 16px;
 }
+
+/* Size Classes */
+.custom-allkons-input.size-large {
+  height: 48px;
+  font-size: 16px;
+}
+
+.custom-allkons-input.size-large.with-padding {
+  padding: 12px 16px;
+}
+
+.custom-allkons-input.size-middle {
+  height: 40px;
+  font-size: 16px;
+}
+
+.custom-allkons-input.size-middle.with-padding {
+  padding: 8px 16px;
+}
+
+.custom-allkons-input.size-small {
+  height: 32px;
+  font-size: 14px;
+}
+
+.custom-allkons-input.size-small.with-padding {
+  padding: 4px 12px;
+}
+
+/* Focus Ring */
+.custom-allkons-input.with-focus-ring.ant-input-outlined:focus-within {
+  border: 1px solid var(--primary-color, #1890ff);
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* Prefix Wrapper */
+.prefix-wrapper {
+  margin-right: 4px;
+}
+
+/* Password Toggle */
+.password-toggle {
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.3s;
+}
+
+.password-toggle:hover {
+  opacity: 0.7;
+}
+
+.eye-icon {
+  color: #8c8c8c;
+}
+
+/* Required Asterisk */
+.required-asterisk {
+  color: var(--primary-color, #1890ff);
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* Form Item */
+.form-item-no-margin {
+  margin-bottom: 0;
+}
+

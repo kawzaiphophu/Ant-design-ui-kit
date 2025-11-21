@@ -4,6 +4,19 @@
 }
 
 .custom-allkons.custom-radio-group .ant-radio {
-  align-self: start !important;
-  margin-top: 4px !important;
+  align-self: flex-start;
+  margin-top: 4px;
 }
+
+/* Required Asterisk */
+.required-asterisk {
+  color: var(--primary-color, #1890ff);
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* Form Item */
+.form-item-no-margin {
+  margin-bottom: 0;
+}
+

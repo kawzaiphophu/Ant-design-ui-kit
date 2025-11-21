@@ -40,6 +40,7 @@
  * </CustomButton>
  */
 import React from 'react';
+import './button.css';
 type Variant = 'outlined' | 'dashed' | 'solid' | 'ghost' | 'link';
 type Size = 'small' | 'middle' | 'large';
 type Color = 'primary' | 'error' | 'neutral';

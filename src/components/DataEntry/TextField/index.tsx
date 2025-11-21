@@ -126,24 +126,18 @@ const CustomTextField: FC<CustomTextFieldProps> = ({
   const [showPassword, setShowPassword] = useState(false);
 
   // Determine input size classes
-  let sizeClass = '';
+  let sizeClass = 'custom-allkons-input';
   if (size === 'large') {
-    sizeClass = `h-[48px] ${
-      addonBefore || addonAfter ? '' : '!py-3 !px-4'
-    }  !text-base`;
+    sizeClass += addonBefore || addonAfter ? ' size-large' : ' size-large with-padding';
   } else if (size === 'middle') {
-    sizeClass = `h-[40px] ${
-      addonBefore || addonAfter ? '' : '!py-2 !px-4'
-    } !text-base`;
+    sizeClass += addonBefore || addonAfter ? ' size-middle' : ' size-middle with-padding';
   } else if (size === 'small') {
-    sizeClass = `h-[32px] ${
-      addonBefore || addonAfter ? '' : '!py-1 !px-3'
-    }  !text-sm`;
+    sizeClass += addonBefore || addonAfter ? ' size-small' : ' size-small with-padding';
   }
 
-  // Prepare prefix wrapper with Tailwind margin
+  // Prepare prefix wrapper
   const defaultPrefix = prefix ? (
-    <span className="mr-1">{prefix}</span>
+    <span className="prefix-wrapper">{prefix}</span>
   ) : undefined;
 
   // Handle password visibility toggle
@@ -232,13 +226,13 @@ const CustomTextField: FC<CustomTextFieldProps> = ({
     if (type === 'password') {
       return (
         <span
-          className="cursor-pointer select-none hover:opacity-70 transition-opacity"
+          className="password-toggle"
           onClick={togglePasswordVisibility}
         >
           {showPassword ? (
-            <i className="ri-eye-line text-gray-500"></i>
+            <i className="ri-eye-line eye-icon"></i>
           ) : (
-            <i className="ri-eye-off-line text-gray-500"></i>
+            <i className="ri-eye-off-line eye-icon"></i>
           )}
         </span>
       );
@@ -262,11 +256,7 @@ const CustomTextField: FC<CustomTextFieldProps> = ({
 
   const inputNode = (
     <Input
-      className={`custom-allkons-input ${sizeClass} ${className} [&.ant-input]:!rounded-lg ${
-        focusRing
-          ? '[&.ant-input-outlined:focus-within]:!border [&.ant-input-outlined:focus-within]:!border-primary [&.ant-input-outlined:focus-within]:!ring-2 [&.ant-input-outlined:focus-within]:!ring-primary-hover'
-          : ''
-      }`}
+      className={`${sizeClass} ${className} input-rounded ${focusRing ? 'with-focus-ring' : ''}`}
       placeholder={placeholder}
       prefix={defaultPrefix}
       suffix={getSuffix()}
@@ -287,13 +277,13 @@ const CustomTextField: FC<CustomTextFieldProps> = ({
     (Array.isArray(rules) && rules.some((rule) => rule.required === true)) ||
     required;
 
-  // Prepare label with asterisk after, using Tailwind for error color and margin
+  // Prepare label with asterisk after
   const renderLabel = () => {
     if (label) {
       return (
         <span>
           {label}
-          {isRequired && <span className="text-primary ml-1 text-xs">*</span>}
+          {isRequired && <span className="required-asterisk">*</span>}
         </span>
       );
     }
@@ -315,7 +305,7 @@ const CustomTextField: FC<CustomTextFieldProps> = ({
         wrapperCol={wrapperCol}
         validateStatus={validateStatus}
         help={help}
-        className="!mb-0"
+        className="form-item-no-margin"
         getValueProps={getValueProps}
         {...formItemProps}
       >

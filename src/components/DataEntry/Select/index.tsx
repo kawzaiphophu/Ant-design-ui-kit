@@ -137,13 +137,13 @@ const CustomSelectField: FC<CustomSelectFieldProps> = ({
     (Array.isArray(rules) && rules.some((rule) => rule.required === true)) ||
     required;
 
-  // Prepare label with asterisk after, using Tailwind for error color and margin
+  // Prepare label with asterisk after
   const renderLabel = () => {
     if (label) {
       return (
         <span>
           {label}
-          {isRequired && <span className="text-primary ml-1 text-xs">*</span>}
+          {isRequired && <span className="required-asterisk">*</span>}
         </span>
       );
     }
@@ -165,7 +165,7 @@ const CustomSelectField: FC<CustomSelectFieldProps> = ({
         wrapperCol={wrapperCol}
         validateStatus={validateStatus}
         help={help}
-        className="!mb-0"
+        className="form-item-no-margin"
         {...formItemProps}
       >
         {selectNode}
